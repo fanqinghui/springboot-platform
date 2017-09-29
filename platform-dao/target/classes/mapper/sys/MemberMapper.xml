@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="com.wish.platform.dao.mapper.MemberMapper">
+    <select id="findMemberByUid" resultType="com.wish.platform.dao.entry.Member">
+        SELECT * FROM prefix_member WHERE uid=#{uid} limit 0,1;
+    </select>
+
+    <select id="findMemberByMemberId" resultType="com.wish.platform.dao.entry.Member">
+        SELECT * FROM prefix_member WHERE employee_id=#{employee_id}
+    </select>
+</mapper>

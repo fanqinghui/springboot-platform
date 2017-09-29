@@ -1,0 +1,6 @@
+com\wish\platform\dao\config\MyBatisMapperScannerConfig.class
+com\wish\platform\dao\mapper\MemberMapper.class
+com\wish\platform\dao\DaoMember.class
+com\wish\platform\dao\IDaoMember.class
+com\wish\platform\dao\config\MyBatisConfig.class
+com\wish\platform\dao\entry\Member.class
