@@ -19,13 +19,8 @@ public class DaoMember implements IDaoMember{
     private MemberMapper memberMapper;
 
     @Override
-    public Member findMemberByUid(Long uid) throws Exception {
-        return memberMapper.findMemberByUid(uid);
-    }
-
-    @Override
-    public List<Member> findMemberByMemberId(Integer memberId) throws Exception {
-        PageHelper.startPage(1,1);
+    public List<Member> findMemberByMemberId(Integer memberId,Integer pageNum,Integer pageSize) throws Exception {
+        PageHelper.startPage(pageNum,pageSize);
         return memberMapper.findMemberByMemberId(memberId);
     }
 }

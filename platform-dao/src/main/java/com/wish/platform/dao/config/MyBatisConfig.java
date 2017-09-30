@@ -1,6 +1,7 @@
 package com.wish.platform.dao.config;
 
 import com.github.pagehelper.PageHelper;
+import org.apache.ibatis.plugin.Interceptor;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.springframework.boot.context.properties.ConfigurationProperties;
@@ -31,6 +32,8 @@ public class MyBatisConfig {
 
         sqlSessionFactoryBean.setMapperLocations(resolver.getResources("classpath:/mapper/**/*Mapper.xml"));
 
+        Interceptor[] plugins =  new Interceptor[]{pageHelper()};
+        sqlSessionFactoryBean.setPlugins(plugins);
         return sqlSessionFactoryBean.getObject();
     }
 

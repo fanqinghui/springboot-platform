@@ -9,9 +9,8 @@ import java.util.List;
  */
 public interface IMemberService {
 
-    Member findMemberByUid(Long uid) throws Exception;
 
-    List<Member> findMemberByMemberId(Integer memberId) throws Exception;
+    List<Member> findMemberByMemberId(Integer memberId,Integer pageNum,Integer pageSize) throws Exception;
 
 
 }

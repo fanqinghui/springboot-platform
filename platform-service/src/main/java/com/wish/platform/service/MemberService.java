@@ -1,6 +1,5 @@
 package com.wish.platform.service;
 
-import com.github.pagehelper.PageHelper;
 import com.wish.platform.dao.IDaoMember;
 import com.wish.platform.dao.entry.Member;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,13 +18,7 @@ public class MemberService implements IMemberService{
     private IDaoMember daoMember;
 
     @Override
-    public Member findMemberByUid(Long uid) throws Exception {
-        PageHelper.startPage(1,1);
-        return daoMember.findMemberByUid(uid);
-    }
-
-    @Override
-    public List<Member> findMemberByMemberId(Integer memberId) throws Exception {
-        return daoMember.findMemberByMemberId(memberId);
+    public List<Member> findMemberByMemberId(Integer memberId,Integer pageNum,Integer pageSize) throws Exception {
+        return daoMember.findMemberByMemberId(memberId,pageNum,pageSize);
     }
 }

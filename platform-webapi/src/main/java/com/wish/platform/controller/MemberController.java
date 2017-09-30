@@ -21,8 +21,9 @@ public class MemberController {
 
     @RequestMapping("/member/{memberId}")
     List<Member> findMemberByMemberId(@PathVariable("memberId") Integer memberId) throws Exception{
-        System.out.println("111");
-       return memberService.findMemberByMemberId(memberId);
+        int pageSize=2;
+        int pageNum=2;
+       return memberService.findMemberByMemberId(memberId,pageNum,pageSize);
     }
 
 
