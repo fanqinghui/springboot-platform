@@ -1,8 +1,8 @@
 # springboot 多模块项目
-##缘起
+## 缘起
 简单的项目可以使用直接springboot搭建一个项目工程来完成工作，例如我github上的另外一个项目  [action](https://github.com/fanqinghui/action),但是另外一些项目比较庞大就必须采用分层结构，所以这个项目就是一个比较完成的多模块项目搭建
 
-##模块
+## 模块
 1. platform-common：公用组建
 2. platform-dao: 数据操作层
 3. platform-service:业务操作层
