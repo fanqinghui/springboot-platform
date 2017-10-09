@@ -37,7 +37,7 @@ public class MyBatisConfig {
         return sqlSessionFactoryBean.getObject();
     }
 
-    @Bean
+    //@Bean
     public PageHelper pageHelper() {
         System.out.println("MyBatisConfiguration.pageHelper()");
         PageHelper pageHelper = new PageHelper();
